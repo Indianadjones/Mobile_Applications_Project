@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>Trending Movies</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="dark">
+      <ion-back-button slot="start"></ion-back-button>
+      <ion-title size="large">Trending Movies</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item button *ngFor="let item of movies" [routerLink]="[item.id]"><!-- To iterate an arry of results-->
+     
+      <ion-avatar slot="start" >
+        <img [src]="imageBaseUrl + '/w92' + item.poster_path"/>
+      </ion-avatar>
+
+    <ion-label>{{item.title}}
+    <p>
+    {{item.release_date | date:'y'}} <ion-badge slot="end">{{item.vote_average}}</ion-badge>
+    </p>
+
+    </ion-label>
+  </ion-item>
+  </ion-list>
+
+  <ion-infinite-scroll (ionInfinite)="loadMore($any($event))"><!--(event) was giving me an error,-->
+    <!-- https://stackoverflow.com/questions/66938398/argument-of-type-event-is-not-assignable-to-parameter-of-type-string-->
+    <ion-infinite-scroll-content
+    loadingSpinner="bubbles"
+    loadingText="Loading more data..."></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+  
+
+  <button>Press</button>
+
+</ion-content>
