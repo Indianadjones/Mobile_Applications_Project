@@ -2,8 +2,8 @@
    
   <ion-toolbar color="dark">
     <ion-back-button slot="start"></ion-back-button>
-    <ion-title><!--{{movie.title }}--></ion-title><!--I coudln't get the id information from th-->
-    <ion-title size="medium">Update Genre Page</ion-title><!--Since I couln't continue with my project idea i had to improvise and stayed with the simple stuff from the labs-->
+    <ion-title><!--{{movie.title }}--></ion-title><!--I coudln't get the id information from the movie-->
+    <ion-title size="medium">Update Genre Page</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -17,17 +17,13 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <!-- <p>the Ganre is: {{savedGenre}}</p>
-    <ion-button [routerLink]="['/genre']">Genre</ion-button> -->
-  </div>
 
 </ion-content>
 
 <ion-content>
   <ion-title></ion-title>
   
-  <!--<ion-card> to  -->
+  <!--<ion-card>-->
     <!--<img [src]="imageBaseUrl + '/w400' + movie.poster_path"/>to get the poster  about the movie ran into a bug couldnt fixe it --> 
   <!--</ion-card>-->
 
@@ -35,7 +31,7 @@
 </ion-content>
 
 <ion-footer>
-  <ion-button expand ="full" (click)="openHomepage()">
+  <ion-button color = "dark" expand ="full" (click)="openHomepage()">
     Open Homepage
   </ion-button>
 </ion-footer>

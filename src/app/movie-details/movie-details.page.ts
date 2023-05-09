@@ -27,15 +27,6 @@ movie: any;
     //this.movie = res;
     //});
  }
- //constructor(private str:Storage) {}
-
- //savedGenre:string="";
- //Fired when page is displayed to user.
- //async ionViewWillEnter() {
-
-   //Get value from Storage, set it to savedStatus.
-  // this.savedGenre = await this.str.get("Genre");
- //}
 
  openHomepage(){
   window.open(this.movie.homepage);//to open the homepage of the website
